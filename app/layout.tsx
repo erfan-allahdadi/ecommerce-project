@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { ClerkProvider } from "@clerk/nextjs";
 
 import ModalProvider from "@/providers/ModalProvider";
+import ToastProvider from "@/providers/ToastProvider";
 
 import "./globals.css";
 
@@ -34,6 +35,7 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
+          <ToastProvider />
           <ModalProvider />
           {children}
         </body>
